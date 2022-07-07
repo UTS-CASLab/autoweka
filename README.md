@@ -14,6 +14,8 @@ Auto-WEKA includes a wizard to find the best MCPS of a given dataset without any
 Auto-WEKA allows to select between a list of all WEKA methods and different optimisation strategies and parameters.
 ![GUI Builder](https://raw.githubusercontent.com/dsibournemouth/autoweka/master/img/GUI-builder.png)
 
+## Search space reduction
+
 ## Usage 
 
 * Please watch the [video tutorial](https://github.com/UTS-AAi/autoweka/blob/master/autoweka4mcps/autoweka4mcps_quick_start_guide_ui.mp4) for quick start guide with the user interface (autoweka4mcps/autoweka4mcps_quick_start_guide_ui.mp4)
