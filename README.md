@@ -18,15 +18,15 @@ Auto-WEKA allows to select between a list of all WEKA methods and different opti
 This repository provides supplementary documents for a research journal article on search space reduction with the title: "On Taking Advantage of Opportunistic Meta-knowledge to Reduce Configuration Spaces for Automated Machine Learning" (https://github.com/UTS-CASLab/autoweka/tree/master/autoweka4mcps/doc/spacereduction/)
 
 Optimisation efficiency and the model accuracy attainable for a fixed time budget suffer if this pipeline configuration space is excessively large.
-A key research question is whether it is both possible and practical to preemptively avoid costly evaluations of poorly performing ML pipelines by leveraging their historical performance for various ML tasks, i.e.~meta-knowledge.
+A key research question is whether it is both possible and practical to preemptively avoid costly evaluations of poorly performing ML pipelines by leveraging their historical performance for various ML tasks, i.e. meta-knowledge.
 This research formulates the problem of configuration space reduction in the context of AutoML.
 Given a pool of available ML components, it then investigates whether previous experience can recommend the most promising subset to use as a configuration space when initiating a pipeline composition/optimisation process for a new ML problem, i.e.~running AutoML on a new dataset.
 Specifically, we conduct experiments to explore (1) what size the reduced search space should be and (2) which strategy to use when recommending the most promising subset.
-The previous experience comes in the form of classifier/regressor accuracy rankings derived from either (1) a substantial but non-exhaustive number of pipeline evaluations made during historical AutoML runs, i.e.~`opportunistic' meta-knowledge, or (2) comprehensive cross-validated evaluations of classifiers/regressors with default hyperparameters, i.e.~`systematic' meta-knowledge.
+The previous experience comes in the form of classifier/regressor accuracy rankings derived from either (1) a substantial but non-exhaustive number of pipeline evaluations made during historical AutoML runs, i.e. opportunistic meta-knowledge, or (2) comprehensive cross-validated evaluations of classifiers/regressors with default hyperparameters, i.e. systematic meta-knowledge.
 Overall, numerous experiments with the AutoWeka4MCPS package, including ones leveraging similarities between datasets via the relative landmarking method, suggest that (1) opportunistic/systematic meta-knowledge can improve ML outcomes, typically in line with how relevant that meta-knowledge is, and (2) configuration-space culling is optimal when it is neither too conservative nor too radical.
 However, the utility and impact of meta-knowledge depend critically on numerous facets of its generation and exploitation, warranting extensive analysis; these are often overlooked/underappreciated within AutoML and meta-learning literature.
-In particular, we observe strong sensitivity to the `challenge' of a dataset, i.e.~whether specificity in choosing a predictor leads to significantly better performance.
-Ultimately, identifying `difficult' datasets, thus defined, is crucial to both generating informative meta-knowledge bases and understanding optimal search-space reduction strategies.
+In particular, we observe strong sensitivity to the challenge of a dataset, i.e. whether specificity in choosing a predictor leads to significantly better performance.
+Ultimately, identifying difficult datasets, thus defined, is crucial to both generating informative meta-knowledge bases and understanding optimal search-space reduction strategies.
 The result
 
 ## Usage 
