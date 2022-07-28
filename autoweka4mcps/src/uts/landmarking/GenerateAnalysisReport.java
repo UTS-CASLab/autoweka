@@ -43,10 +43,6 @@ public class GenerateAnalysisReport {
             for (int j = 0; j < 5; j++) {
 
                   
-                // add x
-                int x_index = 8;
-                
-                
                 Autoweka4MCPSExperimentAnalysis amcpsea = new Autoweka4MCPSExperimentAnalysis();
                 ExpResult expResult = amcpsea.readExpFor10foldcv(expFilePath, j);
                 listOfExpResults[listOfDatasets.indexOf(dataSetName)][j] = expResult;
