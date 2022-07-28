@@ -35,6 +35,14 @@ java -Xmx2048m -cp autoweka4mcps.jar autoweka.command.App C:\..\autoweka4mcps\li
 move "C:\..\autoweka4mcps\experiments\add7_shuttle_seedx.zip" "C:\..\Dropbox\add_configs_results\"
 ```
 
+The mean error rate and structure of the best pipelines can be extracted using the following script:
+
+"""
+https://github.com/UTS-CASLab/autoweka/blob/master/autoweka4mcps/src/uts/landmarking/GenerateAnalysisReport.java
+"""
+
+
+
 Optimisation efficiency and the model accuracy attainable for a fixed time budget suffer if this pipeline configuration space is excessively large.
 A key research question is whether it is both possible and practical to preemptively avoid costly evaluations of poorly performing ML pipelines by leveraging their historical performance for various ML tasks, i.e. meta-knowledge.
 This research formulates the problem of configuration space reduction in the context of AutoML.
