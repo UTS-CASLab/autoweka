@@ -36,10 +36,8 @@ move "C:\..\autoweka4mcps\experiments\add7_shuttle_seedx.zip" "C:\..\Dropbox\add
 ```
 
 The mean error rate and structure of the best pipelines can be extracted using the following script:
-
-"""
 https://github.com/UTS-CASLab/autoweka/blob/master/autoweka4mcps/src/uts/landmarking/GenerateAnalysisReport.java
-"""
+
 
 
 
