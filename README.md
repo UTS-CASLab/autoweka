@@ -18,10 +18,17 @@ Auto-WEKA allows to select between a list of all WEKA methods and different opti
 This repository provides supplementary documents for a research journal article on search space reduction with the title: "On Taking Advantage of Opportunistic Meta-knowledge to Reduce Configuration Spaces for Automated Machine Learning" (https://github.com/UTS-CASLab/autoweka/tree/master/autoweka4mcps/doc/spacereduction/)
 
 ```
+// move the experiment folder from dropbox to the experiment folder of AutoWeka4MCPS
 xcopy C:\..\add7_shuttle_seed0 C:\..\autoweka4mcps\experiments\add7_shuttle_seed0\ /E/H
+
+// move the configuration file to the experiment folder of AutoWeka4MCPS
 xcopy C:\Users\Administrator\Dropbox\add_configs\add7\add7_shuttle_seed0\listofexperiments.properties C:\experiments\tools\autoweka4mcps-a\autoweka4mcps\ /Y
+
+// run experiments
 cd C:\experiments\tools\autoweka4mcps-a\autoweka4mcps
 java -Xmx2048m -cp autoweka4mcps.jar autoweka.command.App C:\..\autoweka4mcps\listofexperiments.properties
+
+// zip experiments and move to dropbox
 "C:\Program Files\7-Zip\7z.exe" a -r "C:\..\autoweka4mcps\experiments\add7_shuttle_seedx.zip" "C:\..\autoweka4mcps\experiments\*.*"
 move "C:\..\autoweka4mcps\experiments\add7_shuttle_seedx.zip" "C:\..\Dropbox\add_configs_results\"
 ```
