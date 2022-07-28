@@ -23,33 +23,13 @@ public class GenerateAnalysisReport {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-
-        //String outputFileBestPPPath = "C:\\experiments\\results\\welch-test-dataset-method-50-folds\\pipelines\\avatar.csv";
-        boolean isBaseline = false;
         
-        
+      
+        String expFilePath = "C:\\..\\autoweka4mcps\\experiments\\add7_shuttle_seed0\\";
+         
         List<String> listOfDatasets = new ArrayList<>();
-        listOfDatasets.add("abalone");
-        listOfDatasets.add("adult");
-        listOfDatasets.add("amazon");
-        listOfDatasets.add("car");
-        listOfDatasets.add("cifar10small");
-        listOfDatasets.add("convex");
-        listOfDatasets.add("dexter");
-        listOfDatasets.add("dorothea");
-        listOfDatasets.add("gcredit");
-        listOfDatasets.add("gisette");
-        listOfDatasets.add("kddcup");
-        listOfDatasets.add("krvskp");
-        listOfDatasets.add("madelon");
-        listOfDatasets.add("mnist");
-        listOfDatasets.add("secom");
-        listOfDatasets.add("semeion");
         listOfDatasets.add("shuttle");
-        listOfDatasets.add("waveform");
-        listOfDatasets.add("winequality");
-        listOfDatasets.add("yeast");
-
+        
         ExpResult[][] listOfExpResults = new ExpResult[listOfDatasets.size()][5];
 
         List<List<Double>> listOfDatasetPtest = new ArrayList<>();
@@ -62,10 +42,10 @@ public class GenerateAnalysisReport {
 
             for (int j = 0; j < 5; j++) {
 
+                  
                 // add x
                 int x_index = 8;
-                String expName = "add"+String.valueOf(x_index)+"_" + dataSetName + "_seed" + String.valueOf(j);
-                String expFilePath = "E:\\addx\\" + expName;
+                
                 
                 Autoweka4MCPSExperimentAnalysis amcpsea = new Autoweka4MCPSExperimentAnalysis();
                 ExpResult expResult = amcpsea.readExpFor10foldcv(expFilePath, j);
@@ -73,7 +53,7 @@ public class GenerateAnalysisReport {
 
                 /////////////////// ttest
                 Autoweka4MCPSExperimentAnalysis_V2 amcpsea_v2 = new Autoweka4MCPSExperimentAnalysis_V2();
-                String strsCSV = amcpsea_v2.readExpForSingleFold(expFilePath, j, isBaseline);
+                String strsCSV = amcpsea_v2.readExpForSingleFold(expFilePath, j, false);
 
                 String bestPP = amcpsea_v2.getBestPipeline();
 
@@ -163,7 +143,11 @@ public class GenerateAnalysisReport {
                 //  System.out.print(listOfDatasets.get(i));
                 List<PredictorPair> listOfPredictorsForOneDataset = new ArrayList<>();
 
-                for (int j = 0; j < 5; j++) {
+                
+                
+                {
+                    
+                    int j=0;
 
                     if (listOfExpResults[i][j] != null) {
                         //System.out.print("\t" + listOfExpResults[k][i][j].getBestPipeline());
