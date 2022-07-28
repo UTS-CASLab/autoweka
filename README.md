@@ -17,6 +17,8 @@ Auto-WEKA allows to select between a list of all WEKA methods and different opti
 ## Search space reduction
 This repository provides supplementary documents for a research journal article on search space reduction with the title: "On Taking Advantage of Opportunistic Meta-knowledge to Reduce Configuration Spaces for Automated Machine Learning" (https://github.com/UTS-CASLab/autoweka/tree/master/autoweka4mcps/doc/spacereduction/)
 
+To reduce the search space of AutoWeka4MCPS, please select filters and predictors when creating experiments as mentioned in previous section. This script is created to run experiments on virtual machines (VMs). The experiment settings can be created and stored in cloud storage such as Dropbox or Google Drive. This script moves experiment settings to VMs, run experiments, make a zip file of experiment results and move them to the cloud storage.
+
 ```
 // move the experiment folder from dropbox to the experiment folder of AutoWeka4MCPS
 xcopy C:\..\add7_shuttle_seed0 C:\..\autoweka4mcps\experiments\add7_shuttle_seed0\ /E/H
