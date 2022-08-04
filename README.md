@@ -18,6 +18,7 @@ Auto-WEKA allows selecting between a list of all WEKA methods and different opti
 This repository provides supplementary documents for a research journal article on search space reduction titled: "On Taking Advantage of Opportunistic Meta-knowledge to Reduce Configuration Spaces for Automated Machine Learning." (https://github.com/UTS-CASLab/autoweka/tree/master/autoweka4mcps/doc/spacereduction/)
 
 The abstract of the article is as follows:
+
 *Optimisation efficiency and the model accuracy attainable for a fixed time budget suffer if this pipeline configuration space is excessively large.
 A key research question is whether it is both possible and practical to preemptively avoid costly evaluations of poorly performing ML pipelines by leveraging their historical performance for various ML tasks, i.e. meta-knowledge.
 This research formulates the problem of configuration space reduction in the context of AutoML.
