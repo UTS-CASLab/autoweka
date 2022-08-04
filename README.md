@@ -14,10 +14,23 @@ Auto-WEKA includes a wizard to find the best MCPS of a given dataset without any
 Auto-WEKA allows selecting between a list of all WEKA methods and different optimisation strategies and parameters.
 ![GUI Builder](https://raw.githubusercontent.com/dsibournemouth/autoweka/master/img/GUI-builder.png)
 
-## Search space reduction
+## Search-space reduction
 This repository provides supplementary documents for a research journal article on search space reduction titled: "On Taking Advantage of Opportunistic Meta-knowledge to Reduce Configuration Spaces for Automated Machine Learning." (https://github.com/UTS-CASLab/autoweka/tree/master/autoweka4mcps/doc/spacereduction/)
 
-To reduce the search space of AutoWeka4MCPS, please select filters and predictors when creating experiments, as mentioned in the previous section. This script is created to run experiments on virtual machines (VMs). The experiment settings can be created and stored in cloud storage such as Dropbox or Google Drive. This script moves experiment settings to VMs to run experiments, makes a zip file of experiment results, and moves them to the cloud storage.
+The abstract of the article is as follows:
+*Optimisation efficiency and the model accuracy attainable for a fixed time budget suffer if this pipeline configuration space is excessively large.
+A key research question is whether it is both possible and practical to preemptively avoid costly evaluations of poorly performing ML pipelines by leveraging their historical performance for various ML tasks, i.e. meta-knowledge.
+This research formulates the problem of configuration space reduction in the context of AutoML.
+Given a pool of available ML components, it then investigates whether previous experience can recommend the most promising subset to use as a configuration space when initiating a pipeline composition/optimisation process for a new ML problem, i.e.~running AutoML on a new dataset.
+Specifically, we conduct experiments to explore (1) what size the reduced search space should be and (2) which strategy to use when recommending the most promising subset.
+The previous experience comes in the form of classifier/regressor accuracy rankings derived from either (1) a substantial but non-exhaustive number of pipeline evaluations made during historical AutoML runs, i.e. opportunistic meta-knowledge, or (2) comprehensive cross-validated evaluations of classifiers/regressors with default hyperparameters, i.e. systematic meta-knowledge.
+Overall, numerous experiments with the AutoWeka4MCPS package, including ones leveraging similarities between datasets via the relative landmarking method, suggest that (1) opportunistic/systematic meta-knowledge can improve ML outcomes, typically in line with how relevant that meta-knowledge is, and (2) configuration-space culling is optimal when it is neither too conservative nor too radical.
+However, the utility and impact of meta-knowledge depend critically on numerous facets of its generation and exploitation, warranting extensive analysis; these are often overlooked/underappreciated within AutoML and meta-learning literature.
+In particular, we observe strong sensitivity to the challenge of a dataset, i.e. whether specificity in choosing a predictor leads to significantly better performance.
+Ultimately, identifying difficult datasets, thus defined, is crucial to both generating informative meta-knowledge bases and understanding optimal search-space reduction strategies.*
+
+
+For those wishing to explore search-space reduction in AutoWeka4MCPS for themselves, please select filters and predictors when creating experiments, as mentioned in the previous section. To more closely mimic the experiments in the article, use the following script, which is created to run experiments on virtual machines (VMs). The experiment settings can be created and stored in cloud storage such as Dropbox or Google Drive. This script moves experiment settings to VMs to run experiments, makes a zip file of experiment results, and moves them to the cloud storage.
 
 ```
 // move the experiment folder from dropbox to the experiment folder of AutoWeka4MCPS
@@ -41,19 +54,10 @@ https://github.com/UTS-CASLab/autoweka/blob/master/autoweka4mcps/src/uts/landmar
 
 
 
-Optimisation efficiency and the model accuracy attainable for a fixed time budget suffer if this pipeline configuration space is excessively large.
-A key research question is whether it is both possible and practical to preemptively avoid costly evaluations of poorly performing ML pipelines by leveraging their historical performance for various ML tasks, i.e. meta-knowledge.
-This research formulates the problem of configuration space reduction in the context of AutoML.
-Given a pool of available ML components, it then investigates whether previous experience can recommend the most promising subset to use as a configuration space when initiating a pipeline composition/optimisation process for a new ML problem, i.e.~running AutoML on a new dataset.
-Specifically, we conduct experiments to explore (1) what size the reduced search space should be and (2) which strategy to use when recommending the most promising subset.
-The previous experience comes in the form of classifier/regressor accuracy rankings derived from either (1) a substantial but non-exhaustive number of pipeline evaluations made during historical AutoML runs, i.e. opportunistic meta-knowledge, or (2) comprehensive cross-validated evaluations of classifiers/regressors with default hyperparameters, i.e. systematic meta-knowledge.
-Overall, numerous experiments with the AutoWeka4MCPS package, including ones leveraging similarities between datasets via the relative landmarking method, suggest that (1) opportunistic/systematic meta-knowledge can improve ML outcomes, typically in line with how relevant that meta-knowledge is, and (2) configuration-space culling is optimal when it is neither too conservative nor too radical.
-However, the utility and impact of meta-knowledge depend critically on numerous facets of its generation and exploitation, warranting extensive analysis; these are often overlooked/underappreciated within AutoML and meta-learning literature.
-In particular, we observe strong sensitivity to the challenge of a dataset, i.e. whether specificity in choosing a predictor leads to significantly better performance.
-Ultimately, identifying difficult datasets, thus defined, is crucial to both generating informative meta-knowledge bases and understanding optimal search-space reduction strategies.
 
 
-## Usage 
+
+## Basic usage 
 
 * Please watch the [video tutorial](https://github.com/UTS-AAi/autoweka/blob/master/autoweka4mcps/autoweka4mcps_quick_start_guide_ui.mp4) for a quick start guide with the user interface (autoweka4mcps/autoweka4mcps_quick_start_guide_ui.mp4)
 * It is necessary to allocate more memory for AutoWeka4MCPS to deal with large datasets, e.g., allocating 2GB memory:
