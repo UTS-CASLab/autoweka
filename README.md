@@ -4,20 +4,20 @@ Auto-WEKA is a tool for automating the selection of methods and hyperparameters 
 ![GUI Main](https://raw.githubusercontent.com/dsibournemouth/autoweka/master/img/GUI-main.png)
 
 ## Description
-Many different machine learning algorithms exist that can easily be used off the shelf, many of these methods are implemented in the open source WEKA package. However, each of these algorithms have their own hyperparameters that can drastically change their performance, and there are a staggeringly large number of possible alternatives overall. Auto-WEKA considers the problem of simultaneously composing an MCPS and setting its hyperparameters, going beyond previous methods that address these issues in isolation. Auto-WEKA does this using a fully automated approach, leveraging recent innovations in Bayesian optimization. Our hope is that Auto-WEKA will help non-expert users to more effectively identify machine learning algorithms and hyperparameter settings appropriate to their applications, and hence to achieve improved performance.
+Many different machine learning algorithms can easily be used off the shelf. Many of these methods are implemented in the open source WEKA package. However, each of these algorithms has its hyperparameters that can drastically change their performance, and there are a staggeringly large number of possible alternatives overall. Auto-WEKA considers the problem of simultaneously composing an MCPS and setting its hyperparameters, going beyond previous methods that address these issues in isolation. Auto-WEKA does this using a fully automated approach, leveraging recent innovations in Bayesian optimization. We hope that Auto-WEKA will help non-expert users to more effectively identify machine learning algorithms and hyperparameter settings appropriate to their applications, hence achieving improved performance.
 
 ## Auto-WEKA as a blackbox
 Auto-WEKA includes a wizard to find the best MCPS of a given dataset without any user interaction, apart from providing a dataset and a time budget.
 ![GUI Wizard](https://raw.githubusercontent.com/dsibournemouth/autoweka/master/img/GUI-wizard.png)
 
 ## Auto-WEKA as an advanced toolbox
-Auto-WEKA allows to select between a list of all WEKA methods and different optimisation strategies and parameters.
+Auto-WEKA allows selecting between a list of all WEKA methods and different optimisation strategies and parameters.
 ![GUI Builder](https://raw.githubusercontent.com/dsibournemouth/autoweka/master/img/GUI-builder.png)
 
 ## Search space reduction
-This repository provides supplementary documents for a research journal article on search space reduction with the title: "On Taking Advantage of Opportunistic Meta-knowledge to Reduce Configuration Spaces for Automated Machine Learning" (https://github.com/UTS-CASLab/autoweka/tree/master/autoweka4mcps/doc/spacereduction/)
+This repository provides supplementary documents for a research journal article on search space reduction titled: "On Taking Advantage of Opportunistic Meta-knowledge to Reduce Configuration Spaces for Automated Machine Learning." (https://github.com/UTS-CASLab/autoweka/tree/master/autoweka4mcps/doc/spacereduction/)
 
-To reduce the search space of AutoWeka4MCPS, please select filters and predictors when creating experiments as mentioned in previous section. This script is created to run experiments on virtual machines (VMs). The experiment settings can be created and stored in cloud storage such as Dropbox or Google Drive. This script moves experiment settings to VMs, run experiments, make a zip file of experiment results and move them to the cloud storage.
+To reduce the search space of AutoWeka4MCPS, please select filters and predictors when creating experiments, as mentioned in the previous section. This script is created to run experiments on virtual machines (VMs). The experiment settings can be created and stored in cloud storage such as Dropbox or Google Drive. This script moves experiment settings to VMs to run experiments, makes a zip file of experiment results, and moves them to the cloud storage.
 
 ```
 // move the experiment folder from dropbox to the experiment folder of AutoWeka4MCPS
@@ -55,8 +55,8 @@ Ultimately, identifying difficult datasets, thus defined, is crucial to both gen
 
 ## Usage 
 
-* Please watch the [video tutorial](https://github.com/UTS-AAi/autoweka/blob/master/autoweka4mcps/autoweka4mcps_quick_start_guide_ui.mp4) for quick start guide with the user interface (autoweka4mcps/autoweka4mcps_quick_start_guide_ui.mp4)
-* It's neccessary to allocate more memory for AutoWeka4MCPS to deal with large datasets, e.g., allocating 2GB memory:
+* Please watch the [video tutorial](https://github.com/UTS-AAi/autoweka/blob/master/autoweka4mcps/autoweka4mcps_quick_start_guide_ui.mp4) for a quick start guide with the user interface (autoweka4mcps/autoweka4mcps_quick_start_guide_ui.mp4)
+* It is necessary to allocate more memory for AutoWeka4MCPS to deal with large datasets, e.g., allocating 2GB memory:
 ```
 cd autoweka4mcps
 java -Xmx2048m -jar autoweka4mcps.jar
@@ -69,9 +69,9 @@ java -Xmx2048m -jar autoweka4mcps.jar
 
 
 ## Publications
-* Tien-Dung Nguyen, David Jacob Kedziora, Katarzyna Musial, and Bogdan Gabrys. ["Exploring Opportunistic Meta-knowledge to Reduce Search Spaces for Automated Machine Learning."](https://arxiv.org/pdf/2105.00282.pdf). In The International Joint Conference on Neural Network IJCNN. IEEE, 2021. (Accepted)
+* Tien-Dung Nguyen, David Jacob Kedziora, Katarzyna Musial, and Bogdan Gabrys. ["Exploring Opportunistic Meta-knowledge to Reduce Search Spaces for Automated Machine Learning."](https://arxiv.org/pdf/2105.00282.pdf). In The International Joint Conference on Neural Network IJCNN. IEEE, 2021.
 * David Jacob Kedziora, Katarzyna Musial, and Bogdan Gabrys. ["AutonoML: Towards an Integrated Framework for Autonomous Machine Learning."](https://arxiv.org/pdf/2012.12600) arXiv preprint arXiv:2012.12600 (2020). (Under Review)
-* Tien-Dung Nguyen, Bogdan Gabrys, and Katarzyna Musial. ["AutoWeka4MCPS-AVATAR: Accelerating Automated Machine Learning Pipeline Composition and Optimisation."](https://arxiv.org/abs/2011.11846) arXiv preprint arXiv:2011.11846. 2020. (Under Review)
+* Tien-Dung Nguyen, Bogdan Gabrys, and Katarzyna Musial. ["AutoWeka4MCPS-AVATAR: Accelerating Automated Machine Learning Pipeline Composition and Optimisation."](https://doi.org/10.1016/j.eswa.2021.115643). Expert Systems with Applications 185, 2021.
 * Tien-Dung Nguyen, Tomasz Maszczyk, Katarzyna Musial, Marc-Andre Zöller, and Bogdan Gabrys. ["AVATAR-Machine Learning Pipeline Evaluation Using Surrogate Model"](https://link.springer.com/chapter/10.1007/978-3-030-44584-3_28). In International Symposium on Intelligent Data Analysis, pp. 352-365. Springer, Cham, 2020.
 * Manuel Martin Salvador, Marcin Budka, and Bogdan Gabrys. "Automatic composition and optimisation of multicomponent predictive systems with an extended Auto-WEKA" Submitted to IEEE Transactions on Automation Science and Engineering, 2018. [[slides](http://www.slideshare.net/draxus/automating-machine-learning-is-it-feasible-62661182)] [[results](https://github.com/dsibournemouth/autoweka/tree/master/results)]
  * Manuel Martin Salvador, Marcin Budka, and Bogdan Gabrys. "Modelling Multi-Component Predictive Systems as Petri Nets". Submitted to 15th Annual Industrial Simulation Conference, 2017 (under review). [[branch](https://github.com/dsibournemouth/autoweka/tree/feature/pnml)]
